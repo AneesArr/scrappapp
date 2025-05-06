@@ -114,9 +114,12 @@ class WishListView(View):
           wishlist,created=Wishlist.objects.get_or_create(user=request.user)
           if action =="add":
             wishlist.scrap.add(scrap_obj)
+            return redirect("product_list")
           elif action == "remove":
             wishlist.scrap.remove(scrap_obj)
-          return redirect("product_list")
+            return redirect("product_list")
+          else:
+            return render(request,"wishlist.html")
      
 class WishListdetailView(View):
       def get(self,request,*args,**kwargs):

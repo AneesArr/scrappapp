@@ -16,7 +16,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active text-black" aria-current="page" href="{%url 'product_add'%}">Home</a>
+                <a class="nav-link active text-black" aria-current="page" href="{%url 'product_list'%}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-black" href="{%url 'list'%}">Profile</a>
@@ -44,7 +44,7 @@
             <div class="card bg-body-secondary" style="width: 18rem; width: auto; margin-top: 20%;" >
               <img src="{{scrap.scrap_image.url}}" class="card-img-top rounded" alt="" style="width: 80%;  height: 200px; margin: auto; margin-top: 10px;">
               <div class="card-body">
-                <h5 class="card-title">{{scrap.name}}</h5>
+                <h5 class="card-title"><strong>{{scrap.name}}</strong></h5>
                 <span class="fw-bold">Rs{{scrap.price}}</span>
               </div>
               <ul class="list-group list-group-flush ">

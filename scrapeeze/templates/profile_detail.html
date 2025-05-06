@@ -20,31 +20,31 @@
   </head>
   <body>
     <div class="container card shadow w-25 mt-5 mb-5">
-      <h3 class="text-primary-emphasis fs-1 fw-bolder mb-3">
+      <div class="row">
+        <h3 class="text-primary-emphasis fs-1 fw-bolder mb-3">
         {{data.first_name}} {{data.last_name}}
       </h3>
       <div class="d-flex gap-1">
-        <label class="fw-bold">Phone :</label>
+        <label class="fw-bold">Phone:</label>
         <p>{{data.phone}}</p>
       </div>
       <div class="d-flex gap-1">
-        <label class="fw-bold">Address :</label>
+        <label class="fw-bold">Address:</label>
         <p>{{data.address}}</p>
       </div>
       <div class="d-flex justify-content-center w-25">
       <button type="button" class="btn btn-outline-dark mb-3">
-        <a href="{%url 'update' request.user.id%}" class="text-decoration-none fw-bold " style="color: inherit;">
-          Edit
-        </a>
+        <a href="{%url 'update' request.user.id%}" class="text-decoration-none fw-bold button-pillow" style="color: inherit;">Edit</a>
       </button>
       </div>
     </div>
+      </div>
     <div class="container">
       <div class="row d-flex ">
         {%for scrap in scraps%}
         <div class="col-lg-4 col-md-5">
           <div class="card bg-body-secondary" style="width: 18rem; width: auto; margin-top: 20%;" >
-            <img src="{{scrap.scrap_image.url}}" class="card-img-top rounded" alt="" style="width: 80%;  height: 200px; margin: auto; margin-top: 10px;">
+            <img src="{{scrap.scrap_image.url}}" class="card-img-top rounded" alt="" style="width: 80%;  height: 100px; margin: auto; margin-top: 10px;">
             <div class="card-body">
               <h5 class="card-title">{{scrap.name}}</h5>
               <span class="fw-bold">Rs{{scrap.price}}</span>
